@@ -1,0 +1,47 @@
+/* ==========================================================================
+	 Main article
+	 ========================================================================== */
+
+.page{
+	width: 236px;
+	margin: 50px auto;
+	position: relative;
+	background: @White;
+	border: 1px solid @Red;
+	padding: 7px 22px 23px 19px;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		width: 100%;
+		height: 100%;
+		border-radius: 15px;
+		background: @Red;
+		z-index: -1;
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		bottom: -15px;
+		right: -15px;
+		width: 30px;
+		height: 30px;
+		background: @Red;
+		border-radius: 50%;
+	}
+	&__title{
+		color: @Red;
+		padding: 8px 0 7px;
+		margin: 0 -13px 4px 0;
+		line-height: 1;
+		min-height: 30px;
+		.svg &{
+			background: url(../img/svg/star.svg) right 0 no-repeat;
+		}
+		.no-svg &,
+		.no-js &{
+			background: url(../img/fallback/star.png) right 0 no-repeat;
+		}
+	}
+}

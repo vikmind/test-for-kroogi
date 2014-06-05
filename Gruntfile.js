@@ -51,7 +51,7 @@ module.exports = function(grunt) {
 				options: {
 					sourceMap: true,
 					sourceMapFilename: 'app/css/style.css.map',
-					sourceMapRootpath: '../'
+					sourceMapRootpath: '../../'
 				},
 				files: {
 					"app/css/style.css": "src/less/style.less"
@@ -83,6 +83,9 @@ module.exports = function(grunt) {
 			},
 			css:{
 				files: ['app/css/style.css']
+			},
+			views:{
+				files: ['app/*.html']
 			}
 		},
 		notify:{

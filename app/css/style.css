@@ -165,7 +165,7 @@ table {
   border-spacing: 0;
 }
 /* ==========================================================================
-	 Colors
+	 Common styles and helpers
 	 ========================================================================== */
 .hidden {
   display: none;
@@ -177,8 +177,8 @@ table {
 html {
   line-height: 1.4;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  font-smoothing: none;
+  font-size: 12px;
+  -webkit-font-smoothing: none;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -192,26 +192,44 @@ h1 {
 a {
   color: #cc0000;
 }
-.message {
+a[href*="http://"],
+a[href*="https://"] {
+  border-bottom: 1px solid;
+  text-decoration: none;
+}
+a[href*="http://"]:after,
+a[href*="https://"]:after {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAKCAMAAABPErQ/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowMTgwMTE3NDA3MjA2ODExODIyQUU0QTcxNDcwRjZFQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1NEI2MURGRUU1MDcxMUUzQTJFREY4QzNDNjhBQ0YxQSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1NEI2MURGREU1MDcxMUUzQTJFREY4QzNDNjhBQ0YxQSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTgyMkFFNEE3MTQ3MEY2RUMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMTgyMkFFNEE3MTQ3MEY2RUMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6Fo7FJAAAABlBMVEXMAAD////D80ESAAAAJklEQVR42mJghAAGMAEBEAZYEMIDSzEyQAQYGVFpiBYGqDkAAQYABzwALT5rin0AAAAASUVORK5CYII=');
+  display: inline;
+  margin-left: 2px;
+  vertical-align: baseline;
+}
+abbr[title] {
+  border-bottom: 1px dashed;
+}
+/* ==========================================================================
+	 Main article
+	 ========================================================================== */
+.page {
   width: 236px;
   margin: 50px auto;
   position: relative;
   background: #ffffff;
   border: 1px solid #cc0000;
-  padding: 10px 20px;
+  padding: 7px 22px 23px 19px;
 }
-.message:before {
+.page:before {
   content: '';
   position: absolute;
   top: 20px;
   left: 20px;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 15px;
   background: #cc0000;
   z-index: -1;
 }
-.message:after {
+.page:after {
   content: '';
   position: absolute;
   bottom: -15px;
@@ -221,23 +239,42 @@ a {
   background: #cc0000;
   border-radius: 50%;
 }
-.message__title {
-  padding: 8px 0;
+.page__title {
+  color: #cc0000;
+  padding: 8px 0 7px;
+  margin: 0 -13px 4px 0;
+  line-height: 1;
+  min-height: 30px;
+}
+.svg .page__title {
+  background: url(../img/svg/star.svg) right 0 no-repeat;
+}
+.no-svg .page__title,
+.no-js .page__title {
+  background: url(../img/fallback/star.png) right 0 no-repeat;
+}
+/* ==========================================================================
+	 Message
+	 ========================================================================== */
+.message {
+  margin-bottom: 8px;
+}
+.message__paragraph {
   margin: 0;
+  line-height: 17px;
 }
-.svg .message__title {
-  background: url(../img/svg/star.svg) top right no-repeat;
+.message__paragraph:first-letter {
+  margin-left: 20px;
 }
-.no-svg .message__title,
-.no-js .message__title {
-  background: url(../img/fallback/star.png) top right no-repeat;
-}
+/* ==========================================================================
+	 Quotation
+	 ========================================================================== */
 .quote {
   margin: 0;
 }
 .quote:before {
   float: left;
-  margin: 0 8px 0 -5px;
+  margin: 3px 8px -4px -5px;
 }
 .svg .quote:before {
   content: url(../img/svg/cite.svg);
@@ -245,5 +282,9 @@ a {
 .no-svg .quote:before,
 .no-js .quote:before {
   content: url(../img/fallback/cite.png);
+}
+.quote__paragraph {
+  margin: 0;
+  line-height: 17px;
 }
 /*# sourceMappingURL=style.css.map */

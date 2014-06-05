@@ -1,6 +1,12 @@
+/* ==========================================================================
+	 Quotation
+	 ========================================================================== */
+
 .quote{
 	margin: 0;
 	&:before{
+		float: left;
+		margin: 3px 8px -4px -5px;
 		.svg &{
 			content: url(../img/svg/cite.svg);
 		}
@@ -8,7 +14,9 @@
 		.no-js &{
 			content: url(../img/fallback/cite.png);
 		}
-		float: left;
-		margin: 0 8px 0 -5px;
+	}
+	&__paragraph{
+		margin: 0;
+		line-height: 17px;
 	}
 }
