@@ -2,6 +2,7 @@
   "name": "kroogi-test",
   "version": "0.0.1",
   "description": "Kroogi test task",
+  "main": "server.js",
   "repository": {
     "type": "git",
     "url": "https://bitbucket.org/"
@@ -16,5 +17,8 @@
     "grunt-notify": "~0.2.20",
     "grunt-shell": "^0.7.0",
     "grunt-svgmin": "~0.3.0"
+  },
+  "dependencies": {
+    "express": "*"
   }
 }
