@@ -1,0 +1,23 @@
+{
+  "name": "kroogi_test",
+  "version": "0.0.1",
+  "authors": [
+    "Victor Marchenko <viktor.marchenko@gmail.com>"
+  ],
+  "main": "app/index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "–",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "3l": "~1.4.4"
+  }
+}
