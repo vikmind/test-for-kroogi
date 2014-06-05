@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 		modernizr:{
 			build: {
 				"devFile" : "bower_components/modernizr/modernizr.js",
-				"outputFile" : "js/vendor/modernizr.js",
+				"outputFile" : "app/js/vendor/modernizr.js",
 				"extra" : {
 					"shiv" : true,
 					"printshiv" : false,
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 					"prefixes" : true,
 					"domprefixes" : true
 				},
-				"tests" : ["inlinesvg"]
+				"tests" : ["svg"]
 			}
 		},
 		/* ====================================================================================================================================================
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 				files: [{
 					cwd: "src/img/svg.src/",
 					src: "*.svg",
-					dest: "src/img/svg/",
+					dest: "app/img/svg/",
 					expand: true
 				}]
 			}

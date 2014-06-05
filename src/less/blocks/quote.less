@@ -1,0 +1,14 @@
+.quote{
+	margin: 0;
+	&:before{
+		.svg &{
+			content: url(../img/svg/cite.svg);
+		}
+		.no-svg &,
+		.no-js &{
+			content: url(../img/fallback/cite.png);
+		}
+		float: left;
+		margin: 0 8px 0 -5px;
+	}
+}

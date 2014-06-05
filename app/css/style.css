@@ -164,4 +164,86 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/* ==========================================================================
+	 Colors
+	 ========================================================================== */
+.hidden {
+  display: none;
+}
+* {
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+html {
+  line-height: 1.4;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-smoothing: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  background: #ffffe1;
+  color: #5798b4;
+}
+h1 {
+  font-size: 15px;
+}
+a {
+  color: #cc0000;
+}
+.message {
+  width: 236px;
+  margin: 50px auto;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #cc0000;
+  padding: 10px 20px;
+}
+.message:before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: #cc0000;
+  z-index: -1;
+}
+.message:after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  background: #cc0000;
+  border-radius: 50%;
+}
+.message__title {
+  padding: 8px 0;
+  margin: 0;
+}
+.svg .message__title {
+  background: url(../img/svg/star.svg) top right no-repeat;
+}
+.no-svg .message__title,
+.no-js .message__title {
+  background: url(../img/fallback/star.png) top right no-repeat;
+}
+.quote {
+  margin: 0;
+}
+.quote:before {
+  float: left;
+  margin: 0 8px 0 -5px;
+}
+.svg .quote:before {
+  content: url(../img/svg/cite.svg);
+}
+.no-svg .quote:before,
+.no-js .quote:before {
+  content: url(../img/fallback/cite.png);
+}
 /*# sourceMappingURL=style.css.map */
