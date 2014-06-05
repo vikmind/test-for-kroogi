@@ -43,6 +43,16 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
+		svg2png: {
+			all: {
+				files: [
+					{
+						src: ['app/img/svg/*.svg'],
+						dest: 'app/img/fallback'
+					}
+				]
+			}
+		},
 		/* ====================================================================================================================================================
 		 *	 CSS config
 		 * ==================================================================================================================================================== */
@@ -138,7 +148,9 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('svg', 'SVGmin', function(){
 		grunt.loadNpmTasks('grunt-svgmin');
+		grunt.loadNpmTasks('grunt-svg2png');
 		grunt.task.run('svgmin');
+		grunt.task.run('svg2png');
 	});
 
 	grunt.registerTask('default', 'Watch', function(){

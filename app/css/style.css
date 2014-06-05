@@ -175,13 +175,13 @@ table {
   box-sizing: inherit;
 }
 html {
-  line-height: 1.4;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 body {
   background: #ffffe1;
@@ -211,40 +211,40 @@ abbr[title] {
 	 Main article
 	 ========================================================================== */
 .page {
-  width: 236px;
-  margin: 50px auto;
-  position: relative;
   background: #ffffff;
   border: 1px solid #cc0000;
+  margin: 50px auto;
   padding: 7px 22px 23px 19px;
+  position: relative;
+  width: 236px;
 }
 .page:before {
+  background: #cc0000;
+  border-radius: 15px;
   content: '';
+  height: 100%;
+  left: 20px;
   position: absolute;
   top: 20px;
-  left: 20px;
   width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  background: #cc0000;
   z-index: -1;
 }
 .page:after {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  right: -15px;
-  width: 30px;
-  height: 30px;
   background: #cc0000;
   border-radius: 50%;
+  bottom: -15px;
+  content: '';
+  height: 30px;
+  position: absolute;
+  right: -15px;
+  width: 30px;
 }
 .page__title {
   color: #cc0000;
-  padding: 8px 30px 7px 0;
-  margin: 0 -13px 4px 0;
   line-height: 1;
+  margin: 0 -13px 4px 0;
   min-height: 30px;
+  padding: 8px 30px 7px 0;
 }
 .svg .page__title {
   background: url(../img/svg/star.svg) right 0 no-repeat;
@@ -256,8 +256,8 @@ abbr[title] {
 @media only screen and (max-width: 276px) {
   .page {
     margin: 0;
-    width: auto;
     overflow: hidden;
+    width: auto;
   }
   .page:before {
     content: none;
@@ -270,8 +270,8 @@ abbr[title] {
   margin-bottom: 8px;
 }
 .message__paragraph {
-  margin: 0;
   line-height: 17px;
+  margin: 0;
 }
 .message__paragraph:first-letter {
   margin-left: 20px;
@@ -294,7 +294,7 @@ abbr[title] {
   content: url(../img/fallback/cite.png);
 }
 .quote__paragraph {
-  margin: 0;
   line-height: 17px;
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

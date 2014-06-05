@@ -3,39 +3,39 @@
 	 ========================================================================== */
 
 .page{
-	width: 236px;
-	margin: 50px auto;
-	position: relative;
 	background: @White;
 	border: 1px solid @Red;
+	margin: 50px auto;
 	padding: 7px 22px 23px 19px;
+	position: relative;
+	width: 236px;
 	&:before{
+		background: @Red;
+		border-radius: 15px;
 		content: '';
+		height: 100%;
+		left: 20px;
 		position: absolute;
 		top: 20px;
-		left: 20px;
 		width: 100%;
-		height: 100%;
-		border-radius: 15px;
-		background: @Red;
 		z-index: -1;
 	}
 	&:after{
-		content: '';
-		position: absolute;
-		bottom: -15px;
-		right: -15px;
-		width: 30px;
-		height: 30px;
 		background: @Red;
 		border-radius: 50%;
+		bottom: -15px;
+		content: '';
+		height: 30px;
+		position: absolute;
+		right: -15px;
+		width: 30px;
 	}
 	&__title{
 		color: @Red;
-		padding: 8px 30px 7px 0;
-		margin: 0 -13px 4px 0;
 		line-height: 1;
+		margin: 0 -13px 4px 0;
 		min-height: 30px;
+		padding: 8px 30px 7px 0;
 		.svg &{
 			background: url(../img/svg/star.svg) right 0 no-repeat;
 		}
@@ -49,8 +49,8 @@
 @media only screen and (max-width:276px){
 	.page{
 		margin: 0;
-		width: auto;
 		overflow: hidden;
+		width: auto;
 		&:before{
 			content: none;
 		}
