@@ -32,7 +32,7 @@
 	}
 	&__title{
 		color: @Red;
-		padding: 8px 0 7px;
+		padding: 8px 30px 7px 0;
 		margin: 0 -13px 4px 0;
 		line-height: 1;
 		min-height: 30px;
@@ -42,6 +42,17 @@
 		.no-svg &,
 		.no-js &{
 			background: url(../img/fallback/star.png) right 0 no-repeat;
+		}
+	}
+}
+
+@media only screen and (max-width:276px){
+	.page{
+		margin: 0;
+		width: auto;
+		overflow: hidden;
+		&:before{
+			content: none;
 		}
 	}
 }
